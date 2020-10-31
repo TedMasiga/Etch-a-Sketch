@@ -1,0 +1,71 @@
+:root{
+    --grid-rows: 0;
+    --grid-cols: 0;
+    --container-height: 480px;
+    --container-width: 700px;
+}
+
+@font-face{
+    font-family: "narutoFont";
+    src: url("ninja-naruto/njnaruto.ttf");
+}
+
+.main-title{
+    font-family: 'narutoFont', Arial, sans-serif;
+    text-align: center;
+    font-size: 50px;
+    color: rgb(16, 7, 1);
+    text-shadow: black 1px 4px;
+}
+
+body{
+    background-color: cornsilk;
+    height: auto;
+    margin: 0 90px;
+    padding-bottom: 20px;
+}
+
+#container{
+    height: var(--container-height);
+    width: var(--container-width);
+    display: grid;
+    justify-content: center;
+    grid-gap: 0;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    border: 10px solid brown;
+    margin-top: 20px;
+    margin: 0 auto;
+}
+
+.top-menu{
+    display: flex;
+    justify-content: center;
+    column-gap: 100px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+button{
+    width: 100px;
+    height: 50px;
+    background-color: rgb(238, 226, 134);
+}
+
+.choice{
+    width: 100px;
+    height: 50px;
+    background-color: black;
+}
+
+button:hover, .choice:hover{
+    box-shadow: 1px 1px 2px 8px rgba(173, 224, 173, 0.729);
+}
+
+.grid-item{
+    border: 1px solid rgb(97, 92, 92);
+    text-align: center;
+    height: calc(var(--container-height)/var(--grid-rows)-1);
+    width: calc(var(--container-width)/var(--grid-cols)-1);
+}
